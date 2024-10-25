@@ -23,20 +23,12 @@ Admin (set, add, remove coins/scan eggs & locations)
 Ko-fi sponsors are not working so come on our [discord](https://discord.gg/Z24TkRDSUH)
 
 # Installation
+You can get started straight away by following these steps:
 
-Warning: You need Pterodactyl already setup on a domain for lexacyl to work
-1. Upload the file above onto a Pterodactyl NodeJS server [Download the egg from Parkervcp's GitHub Repository](https://github.com/parkervcp/eggs/blob/master/generic/nodejs/egg-node-js-generic.json)
-2. Unarchive the file and set the server to use NodeJS 16
-3. Configure `config.tomel` with the scan or manuel
-4. Run `npm i`
-5. Start the server with `node index.js`
-6. Login to your DNS manager, point the domain you want your dashboard to be hosted on to your VPS IP address. (Example: dashboard.domain.com 192.168.0.1)
-7. Run `apt install nginx && apt install certbot` on the vps
-8. Run `ufw allow 80` and `ufw allow 443` on the vps
-9. Run `certbot certonly -d <Your domain>` then do 1 and put your email
-10. Run `nano /etc/nginx/sites-enabled/lexactyl.conf`
-11. Paste the configuration at the bottom of this and replace with the IP of the pterodactyl server including the port and with the domain you want your dashboard to be hosted on.
-12. Run `systemctl restart nginx` and try open your domain.
+1. Clone the repo: Run git clone https://github.com/Lexactyl/panel on your machine
+2. Enter the directory and configure the config.tomel file - most are optional except the Pterodactyl and OAuth2 settings which must be configured
+3. Check everything out and make sure you've configured Lexactyl correctly
+4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
 
 # Nginx Proxy Config
 ```Nginx
@@ -99,5 +91,3 @@ server {
 # License
 (c) 2024 Lynix and contributors. All rights reserved. Licensed under the MIT License.
 
-# Legacy Notice
-Lexactyl 12.z is no more managed shift to Lexactyl 13
