@@ -140,7 +140,7 @@ if (cluster.isMaster) {
     console.table(modulesTable);
   
     const numCPUs = settings.clusters;
-    console.log(chalk.gray('Starting workers on Heliactyl ' + settings.version));
+    console.log(chalk.gray('Starting workers on Lexactyl ' + settings.version));
     console.log(chalk.gray(`Master ${process.pid} is running`));
     console.log(chalk.gray(`Forking ${numCPUs} workers...`));
   
