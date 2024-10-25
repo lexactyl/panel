@@ -18,7 +18,7 @@ key = "ptla_"
 
 # Webserver
 [website]
-port = 3_001
+port = "3001"
 secret = "secret"
 discord = "https://discord.gg/example"
 coins = "Coins"
